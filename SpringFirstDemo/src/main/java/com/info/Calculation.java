@@ -1,6 +1,7 @@
 package com.info;
 
 public class Calculation {
+	private int a;
 
 	private int num1;
 	private int num2;
@@ -22,5 +23,10 @@ public class Calculation {
 		return num1+num2;
 	}
 
+	public void show()
+	{
+		System.out.println(a);
+		this.a=this.a+1;
+	}
 	
 }

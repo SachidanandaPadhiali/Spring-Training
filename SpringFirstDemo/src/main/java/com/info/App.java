@@ -7,14 +7,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * Hello world!
  *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
-      
-    	ApplicationContext  context = new ClassPathXmlApplicationContext("spring.xml");
-    	Calculation cal = (Calculation) context.getBean("cal");
-    	System.out.println(cal.add());
-    
-    }
+public class App {
+	public static void main(String[] args) {
+
+		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+		Employee e = (Employee) context.getBean("emp");
+		e.showInfo();
+
+	}
 }
