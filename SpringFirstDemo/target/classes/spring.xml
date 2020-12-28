@@ -13,7 +13,7 @@
     
        <bean id="bik" class="com.info.Bike"/>
        
-       <bean id="car" class="com.info.Bike"/>
+       <bean id="car" class="com.info.Car"/>
        
        <bean id="emp" class="com.info.Employee">
        <property name="id" value="101"/>

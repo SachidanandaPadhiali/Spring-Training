@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="cal" class="com.info.Calculation" scope="singleton">
+		<property name="num1" value="23" />
+		<property name="num2" value="89" />
+	</bean>
+
+<bean id="cal1" class="com.info.Calculation">
+  <constructor-arg value="30"> </constructor-arg>
+  <constructor-arg value="90"></constructor-arg>
+  
+</bean>
+
+
+
+    <bean id="emp" class="com.info.Employee">
+       <property name="id" value="101"/>
+       <property name="name" value="Angel"/>
+       <property name="sal" value="23232"/>
+       <property name="add" ref="ad"/>
+       </bean>
+       
+      <bean id='emp1' class="com.info.Employee">
+      <constructor-arg value="1010"></constructor-arg>
+      <constructor-arg value="Sanjay"></constructor-arg>
+      <constructor-arg value="1010987"></constructor-arg>
+      <constructor-arg ref="ad"></constructor-arg>
+      
+      </bean>
+      
+      
+<!--       <bean id="emp2" class="com.info.Employee" autowire="byName"/>
+ -->     
+       <bean id="emp2" class="com.info.Employee" autowire="byType"/>
+  
+      
+       <bean id="emp3" class="com.info.Employee" autowire="constructor"/>
+       
+       <bean id="ad" class="com.info.Address"/>
+   
+   
+   
+</beans>

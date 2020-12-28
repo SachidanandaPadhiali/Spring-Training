@@ -1,16 +1,31 @@
 package com.info;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Employee {
 
+	@Value("101")
 	private int id;
+	@Value("Queen")
 	private String name;
+	@Value("232323")
 	private int sal;
+	
 	private Address add;
 
 	public Employee() {
 		
 	}
-		
+
+	@Autowired
+	public Employee(Address add) {
+			this.add = add;
+	}
+
+	
 	public Employee(int id, String name, int sal, Address add) {
 		super();
 		this.id = id;
@@ -19,9 +34,6 @@ public class Employee {
 		this.add = add;
 	}
 
-
-	
-	
 	public void setAdd(Address add) {
 		this.add = add;
 	}

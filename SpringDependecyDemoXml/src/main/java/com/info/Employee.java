@@ -10,7 +10,12 @@ public class Employee {
 	public Employee() {
 		
 	}
-		
+
+	public Employee(Address add) {
+			this.add = add;
+	}
+
+	
 	public Employee(int id, String name, int sal, Address add) {
 		super();
 		this.id = id;
@@ -20,8 +25,6 @@ public class Employee {
 	}
 
 
-	
-	
 	public void setAdd(Address add) {
 		this.add = add;
 	}
