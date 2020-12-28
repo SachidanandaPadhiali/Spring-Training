@@ -4,6 +4,16 @@ public class Calculation {
 	public Calculation() {
 	}
 	
+	
+	public void after()
+	{
+		System.out.println("After creating the object for Calculator bean");
+	}
+	
+	public void before()
+	{
+		System.out.println("Before deleting the object for Calculator bean");
+	}
 		
 	public Calculation(int num1, int num2) {
 		this.num1 = num1;

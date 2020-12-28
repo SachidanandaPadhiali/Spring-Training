@@ -7,7 +7,7 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean id="cal" class="com.info.Calculation" scope="singleton">
+	<bean id="cal" class="com.info.Calculation" init-method="after" destroy-method="before">
 		<property name="num1" value="23" />
 		<property name="num2" value="89" />
 	</bean>
