@@ -3,7 +3,7 @@ package com.info;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-
+import javax.annotation.*;
 @Component
 public class Employee {
 
@@ -19,7 +19,17 @@ public class Employee {
 	public Employee() {
 		
 	}
+	@PostConstruct
+	public void afterBean()
+	{
+		System.out.println("After creating the bean");
+	}
 	
+	@PreDestroy
+	public void before()
+	{
+		System.out.println("before deletion");
+	}
 
 	@Autowired
 	public Employee(Address add) {
