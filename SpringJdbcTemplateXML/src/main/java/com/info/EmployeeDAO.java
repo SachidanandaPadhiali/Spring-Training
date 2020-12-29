@@ -20,6 +20,20 @@ public class EmployeeDAO {
 	    return jdbcTemplate.update(query);  
 	}  
 
+	public int updateEmployee(Employee e){  
+	    String query="update employee set name='"+e.getName()+"',sal='"+e.getSal()+"' where id='"+e.getId()+"' ";  
+	    return jdbcTemplate.update(query);  
+	}  
+	
+	public int deleteEmployee(Employee e){  
+	    String query="delete from employee where id='"+e.getId()+"' ";  
+	    return jdbcTemplate.update(query);  
+	}  
+
+	
+	
+	
+	
 	
 
 }
