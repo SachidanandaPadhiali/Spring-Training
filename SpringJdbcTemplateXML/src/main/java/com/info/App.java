@@ -1,4 +1,5 @@
 package com.info;
+import java.util.*;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -25,11 +26,39 @@ public class App
 		 * System.out.println(status1);
 		 */  
 	    
-	    Employee e=new Employee(); 
-	    e.setId(102); 
-	    int status=dao.deleteEmployee(e);
-	    System.out.println(status);  
-	   
+		/*
+		 * Employee e=new Employee(); e.setId(102); int status=dao.deleteEmployee(e);
+		 * System.out.println(status);
+		 */
+	    
+	    List<Employee> list=dao.getAll();  
+        
+	    for(Employee e:list) 
+	    {
+	        System.out.println(e.getId());  
+	    System.out.println(e.getName());  
+        
+	    System.out.println(e.getSal());  
+        
+	    }  
+	    
+	    
+
+List<Employee> l = dao.getAllEmployeesRowMapper();
+
+for(Employee e:l) 
+{
+    System.out.println(e.getId());  
+System.out.println(e.getName());  
+
+System.out.println(e.getSal());  
+
+}  
+
+	    
+
+    }
 	    
     }
-}
+
+
